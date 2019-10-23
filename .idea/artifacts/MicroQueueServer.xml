@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="MicroQueueServer">
+    <output-path>$PROJECT_DIR$/out/artifacts/MicroQueueServer</output-path>
+    <root id="archive" name="MicroQueueServer.war" />
+  </artifact>
+</component>
