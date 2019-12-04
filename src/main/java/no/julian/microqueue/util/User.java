@@ -3,7 +3,15 @@ package no.julian.microqueue.util;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.Transient;
+
+@Entity
+//@Table(name = "USER")
 public class User {
+    @Id
 	@Expose
 	@SerializedName("id")
 	private String id;
@@ -11,6 +19,9 @@ public class User {
 	@Expose
 	@SerializedName("name")
 	private String name;
+
+	@Transient
+    private String password;
 
 	public String getId() {
 		return id;

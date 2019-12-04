@@ -10,7 +10,6 @@ import javax.ws.rs.ApplicationPath;
 @ApplicationPath("api")
 public class JAXRSConfiguration extends ResourceConfig {
     public JAXRSConfiguration() {
-        System.out.println("Starting up");
         packages(true, "no.julian.microqueue")
             // Now you can expect validation errors to be sent to the client.
             .property(ServerProperties.BV_SEND_ERROR_IN_RESPONSE, true)

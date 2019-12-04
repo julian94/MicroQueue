@@ -3,10 +3,18 @@ package no.julian.microqueue.util;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
 public class Queue {
+    /*@Id @GeneratedValue
+    Long id;*/
+
+    @Id
+    @GeneratedValue
 	@Expose
 	@SerializedName("id")
-	private String id;
+	private long id;
 
 	@Expose
 	@SerializedName("name")
@@ -25,11 +33,11 @@ public class Queue {
 	@SerializedName("isactive")
 	private boolean isActive;
 
-	public String getId() {
+	public long getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 
